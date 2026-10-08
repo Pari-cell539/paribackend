@@ -4,6 +4,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
+const githubData={
+  
+}
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
@@ -18,6 +22,9 @@ app.get('/login', (req, res) => {
 app.get('/YouTube', (req, res) => {
   res.send('<h1> welcome to pari and keshav channel<h1>');
 });
+app.get('/github',(req,res) => {
+  res.json(githubData)
+})
 
 
 app.listen(process.env.PORT, () => {
